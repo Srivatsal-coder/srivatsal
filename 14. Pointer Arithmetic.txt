@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+int arr[5] = {10, 20, 30, 40, 50};
+int *p = arr;
+for (int i = 0; i < 5; i++) {
+printf("Value = %d\n", *(p + i));
+}
+return 0;
+}
+
+Output:
+Value = 10
+Value = 20
+Value = 30
+Value = 40
+Value = 50

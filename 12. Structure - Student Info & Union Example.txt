@@ -1,0 +1,43 @@
+Structure - Student Info
+
+#include <stdio.h>
+struct Student {
+int roll;
+char name[20];
+float marks;
+};
+int main() {
+struct Student s;
+printf("Enter roll, name and marks: ");
+scanf("%d %s %f", &s.roll, s.name, &s.marks);
+printf("Student Details:\n");
+printf("Roll: %d\nName: %s\nMarks: %.2f\n", s.roll, s.name, s.marks);
+return 0;
+}
+
+Enter roll, name and marks: 101 Alice 95.5
+Student Details:
+Roll: 101
+Name: Alice
+Marks: 95.50
+
+
+Union Example
+
+#include <stdio.h>
+union Data {
+int roll;
+float marks;
+};
+int main() {
+union Data d;
+d.roll = 101;
+printf("Roll = %d\n", d.roll);
+d.marks = 89.5;
+printf("Marks = %.2f\n", d.marks);
+return 0;
+}
+
+Output:
+Roll = 101
+Marks = 89.50
